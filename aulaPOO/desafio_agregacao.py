@@ -1,8 +1,3 @@
-
-
-
-
-
 class Livros:
     def __init__(self, titulo, autor, paginas, disponibilidade):
         self.titulo = titulo
