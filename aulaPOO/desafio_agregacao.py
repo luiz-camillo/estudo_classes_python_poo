@@ -24,15 +24,37 @@ class Biblioteca:
             if livro.disponibilidade:
                 print('Livro disponível para venda')
             else:
-                print('Livro indisponível')
+                print('Livro indisponível para venda')
             counter += 1
 
-l1 = Livros('A Serpente',  'Eduarda Ferreira', 512, False)
-l2 = Livros('Sai Azar', 'Luide', 15, True)
 
+titulo = input('Digite o título do livro: ')
+autor = input('Digite o nome do autor: ')
+
+while True:
+    try:
+        paginas = int(input('Quantas páginas tem o livro?: '))
+        break
+    except ValueError:
+        print('Entrada inválida, apenas números inteiros, tente novamente.')
+
+while True:
+        disponivel = input('O livro está disponível para venda? (S/N): ').lower()
+        if disponivel == 'n' or disponivel== 's':
+            break
+        else:
+            print('Entrada inválida, tente novamente')
+
+if disponivel == 's':
+    disponibilidade = True
+else:
+    disponibilidade = False
+
+
+l1 = Livros(titulo,  autor, paginas, disponibilidade)
 
 biblioteca = Biblioteca()
 biblioteca.adicionar_livros(l1)
-biblioteca.adicionar_livros(l2)
-
 biblioteca.listar_livros()
+
+
