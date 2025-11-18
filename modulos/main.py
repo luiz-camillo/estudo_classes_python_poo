@@ -1,7 +1,6 @@
-from funcoes import somar, multi
-from items.cadastro import cliente
+from funcoes import find_index
 
+lista1 = ['a','b','c','d','e']
 
-somar()
-multi()
-cliente()
+var1 = find_index(lista1,'ca')
+print(var1)
