@@ -11,7 +11,6 @@ while True:
         if not name:
             raise ValueError("Você não digitou nada!")
 
-        # verifica se todas as palavras têm apenas letras
         palavras = name.split()
         if not all(palavra.isalpha() for palavra in palavras):
             raise ValueError("O nome não pode conter números ou símbolos!")
